@@ -1,9 +1,10 @@
-import React from 'react';
-import './App.css';
-import styled from 'styled-components';
-import { StyledBtn } from './components/Button.styled';
-import { Link } from './components/Link.styled';
-import { Menu } from './components/Menu.styled';
+import React from "react";
+import "./App.css";
+import styled from "styled-components";
+import { StyledBtn } from "./components/Button.styled";
+import { Link } from "./components/Link.styled";
+import { Menu } from "./components/Menu.styled";
+import { myTheme } from "./components/styles/Theme.styled";
 
 function App() {
   return (
@@ -16,20 +17,23 @@ function App() {
         </ul>  
 
       </Menu> */}
-      <Box>       
+      <Box>
         {/* <StyledBtn color={"green"} fontSize={"20px"}>Hello</StyledBtn>
         <StyledBtn color={"red"} >Hello</StyledBtn>
         <StyledBtn fontSize={"30px"}>Hello</StyledBtn> */}
 
-        <StyledBtn btnType={"primary"} active>Hello</StyledBtn>
-        <StyledBtn btnType={"outline"}>Hello</StyledBtn>
+        <StyledBtn color={myTheme.colors.primary} btnType={"primary"} active>
+          Hello
+        </StyledBtn>
+        <StyledBtn color={myTheme.colors.secondary} btnType={"outline"}>
+          Hello
+        </StyledBtn>
       </Box>
     </div>
   );
 }
 
 export default App;
-
 
 const Box = styled.div`
   height: 100vh;
@@ -46,7 +50,7 @@ const Box = styled.div`
     cursor: zoom-in;
   }
 
-  @media screen and (max-width: 800px) {
+  @media ${myTheme.media.tablet} {
     flex-direction: column;
   }
-`
+`;

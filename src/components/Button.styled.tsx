@@ -24,7 +24,7 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
     css<StyledBtnPropsType>`
     
   border: 2px solid ${(props) => props.color || "#fb3f78"};
-  color: ${(props) => props.color || "#fb3f78"}
+  color:  ${(props) => props.color || "#fb3f78"};
   background-color: transparent;
 
   &:hover {
